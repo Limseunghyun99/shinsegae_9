@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>스타필드 청라 K-POP Fandom Experience</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Lucide Icons CDN -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap');
+        body { font-family: 'Noto Sans KR', sans-serif; }
+        
+        :root {
+            --ssg-red: #E60000;
+        }
+
+        .text-ssg-red { color: var(--ssg-red); }
+        .bg-ssg-red { background-color: var(--ssg-red); }
+        .border-ssg-red { border-color: var(--ssg-red); }
+
+        .tab-active { 
+            border-color: var(--ssg-red) !important; 
+            background-color: white !important; 
+            transform: scale(1.02); 
+            box-shadow: 0 20px 25px -5px rgb(230 0 0 / 0.1); 
+        }
+        
+        .fade-in { animation: fadeIn 0.5s ease-out forwards; }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .premium-gradient { 
+            background: linear-gradient(135deg, #1a1a1a 0%, #000000 100%); 
+        }
+        
+        .glass-effect {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .gold-border {
+            border: 1px solid rgba(230, 0, 0, 0.3);
+        }
+    </style>
+</head>
+<body class="bg-neutral-50 text-slate-900">
+
+    <!-- Navigation -->
+    <nav class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-neutral-100 px-6 py-4 flex justify-between items-center">
+        <div class="flex items-center gap-4">
+            <h1 class="text-xl font-bold tracking-tighter text-black uppercase">
+                K-POP <span class="text-ssg-red font-black">LandMark</span>
+            </h1>
+            <span class="h-4 w-[1px] bg-neutral-300"></span>
+            <span class="text-[10px] font-bold tracking-widest text-neutral-500 uppercase">Starfiled CHEONG NA</span>
+        </div>
+        <div class="hidden md:flex gap-8 text-xs font-bold uppercase tracking-widest text-neutral-500">
+            <a href="#" class="hover:text-ssg-red transition-colors">Experience</a>
+            <a href="#" class="hover:text-ssg-red transition-colors">Limited MD</a>
+            <a href="#" class="hover:text-ssg-red transition-colors">Star-Bus</a>
+        </div>
+        <button class="text-black px-6 py-2 font-bold rounded-none hover:bg-black transition-all">
+            ENG
+        </button>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="relative px-6 py-24 md:py-32 overflow-hidden premium-gradient text-white text-center border-b border-ssg-red/20">
+        <div class="absolute inset-0 opacity-20 bg-[url('https://images.unsplash.com/photo-1540039155733-5bb30b53aa14?auto=format&fit=crop&q=80')] bg-cover bg-center"></div>
+        <div class="relative z-10 max-w-4xl mx-auto">
+            <div class="inline-block px-4 py-1.5 mb-8 rounded-full border border-ssg-red text-ssg-red text-[17px] font-bold tracking-[0.3em] uppercase">
+                Global K-POP Destination
+            </div>
+            <h2 class="text-5xl md:text-7xl font-bold mb-8 leading-tight tracking-tight">
+                K-POP 문화의 새로운 거점 <br />  <span class="text-ssg-red">스타필드 청라</span>
+            </h2>
+            <p class="text-lg text-neutral-400 max-w-2xl mx-auto mb-12 leading-relaxed font-light">
+                신세계가 제안하는 압도적 팬덤 경험. 아티스트의 고향에서 즐기는 굿즈 쇼핑과 <br class="hidden md:block">
+                성지 순례의 만족감을 스타필드 청라에서 완성하십시오.
+            </p>
+            
+            <div class="flex flex-wrap justify-center gap-4">
+                <div class="glass-effect px-6 py-3 flex items-center gap-3">
+                    <i data-lucide="award" class="h-4 text-ssg-red"></i>
+                    <span class="text-xl font-medium tracking-wide">4대 기획사 단독 MD</span>
+                </div>
+                <div class="glass-effect px-6 py-3 flex items-center gap-3">
+                    <i data-lucide="star" class="h-4 text-ssg-red"></i>
+                    <span class="text-xl font-medium tracking-wide">명예의 전당 '스타 로드'</span>
+                </div>
+                <div class="glass-effect px-6 py-3 flex items-center gap-3">
+                    <i data-lucide="bus" class="h-4 text-ssg-red"></i>
+                    <span class="text-xl font-medium tracking-wide">무료 셔틀 '스타버스'</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- 1. LIMITED PHOTO STUDIO SECTION -->
+    <section class="bg-white py-24 px-6 border-b border-neutral-100">
+        <div class="max-w-6xl mx-auto flex flex-col md:flex-row gap-16 items-center">
+            <div class="flex-1">
+                <div class="text-ssg-red text-xs font-black tracking-widest uppercase mb-4">Core Experience 01</div>
+                <h3 class="text-4xl font-bold mb-6 italic tracking-tight uppercase">Limited <span class="text-ssg-red">MD & Photo Studio</span></h3>
+                <p class="text-neutral-600 mb-8 leading-relaxed text-lg font-light">
+                    HYBE, SM, JYP, YG 등 4대 대형 기획사와 협업한 상시 MD존을 통해 한정판 및 일반 굿즈를 구매해보세요. 
+                    콘서트 착장을 그대로 재현한 독점 포토 부스는 한국의 스타필드 청라에서만 누릴 수 있습니다.
+                </p>
+                <div class="space-y-4 mb-10">
+                    <div class="flex items-center gap-4 bg-neutral-50 p-5 border-l-4 border-ssg-red">
+                        <i data-lucide="award" class="w-5 h-5 text-ssg-red"></i>
+                        <span class="text-sm font-bold">4대 대형 기획사 공식 MD 및 청라 에디션 단독 판매</span>
+                    </div>
+                    <div class="flex items-center gap-4 bg-white p-5 border border-neutral-100">
+                        <i data-lucide="camera" class="w-5 h-5 text-neutral-400"></i>
+                        <span class="text-sm">아티스트 실제 공연 착장 기반 한정판 포토프레임 운영</span>
+                    </div>
+                </div>
+                <button class="flex items-center gap-2 text-ssg-red font-bold text-sm group uppercase tracking-widest">
+                    MD Shop <i data-lucide="arrow-right" class="w-4 h-4 group-hover:translate-x-1 transition-transform"></i>
+                </button>
+            </div>
+            <div class="flex-1 w-full aspect-square bg-black relative overflow-hidden group border border-neutral-300 shadow-2xl">
+                 <img src="AllDayProject_Frame.jpg" alt="Cheongna Photo Booth Frame" class="absolute inset-0 w-full h-full object-cover opacity-70 group-hover:scale-110 group-hover:opacity-90 transition-all duration-700">
+                 <div class="absolute inset-0 flex items-center justify-center bg-black/40 group-hover:bg-black/20 transition-colors">
+                     <div class="text-center p-12 relative z-10">
+                        <div class="w-20 h-20 border border-ssg-red mx-auto mb-6 flex items-center justify-center bg-black/50 backdrop-blur-md">
+                            <i data-lucide="camera" class="w-8 h-8 text-ssg-red"></i>
+                        </div>
+                        <p class="text-[10px] text-ssg-red font-black tracking-widest uppercase mb-2 drop-shadow-md">Exclusive Access</p>
+                        <h4 class="text-white text-2xl font-bold mb-4 italic drop-shadow-lg uppercase text-wrap px-4">Limited Photo Booth</h4>
+                        <p class="text-neutral-200 text-xs font-light">기념 오브제 수집 및 SNS 인증을 위한 최적의 공간</p>
+                     </div>
+                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 2. HALL OF FAME SECTION -->
+    <section class="bg-neutral-950 py-24 px-6 text-white border-b border-ssg-red/30 relative overflow-hidden">
+        <div class="absolute top-0 right-0 w-96 h-96 bg-ssg-red/10 blur-[120px] rounded-full"></div>
+        <div class="max-w-6xl mx-auto flex flex-col md:flex-row-reverse gap-16 items-center relative z-10">
+            <div class="flex-1">
+                <div class="text-ssg-red text-xs font-black tracking-widest uppercase mb-4">Core Experience 02</div>
+                <h3 class="text-4xl font-bold mb-6 italic tracking-tight uppercase text-white">The <span class="text-ssg-red">Star-Road</span> Avenue</h3>
+                <p class="text-neutral-400 mb-8 leading-relaxed text-lg font-light">
+                    할리우드 명예의 거리와 홍콩 스타의 거리를 벤치마킹한 핸드프린팅 애비뉴 '스타 로드'입니다. 
+                    아티스트의 손길이 닿은 성지에서 팬덤의 결속력을 강화하고 K-POP 본고장에 왔다는 자부심을 선사합니다.
+                </p>
+                <div class="grid grid-cols-1 gap-4 mb-10">
+                    <div class="flex items-center gap-4 glass-effect p-5 border-l-4 border-ssg-red">
+                        <i data-lucide="fingerprint" class="w-5 h-5 text-ssg-red"></i>
+                        <span class="text-sm font-bold">글로벌 아티스트 실제 손도장 및 친필 사인 동판</span>
+                    </div>
+                    <div class="flex items-center gap-4 glass-effect p-5">
+                        <i data-lucide="calendar" class="w-5 h-5 text-neutral-500"></i>
+                        <span class="text-sm">야구 비시즌 기간(약 300일)을 활용한 365일 볼거리 제공</span>
+                    </div>
+                </div>
+                <button class="flex items-center gap-2 text-white font-bold text-sm group uppercase tracking-widest">
+                    Explore Star Road <i data-lucide="arrow-right" class="w-4 h-4 group-hover:translate-x-1 transition-transform text-ssg-red"></i>
+                </button>
+            </div>
+            <div class="flex-1 w-full aspect-square bg-neutral-900 relative overflow-hidden group border border-neutral-800 shadow-2xl">
+                 <img src="HollyWood_Honor.jpg" alt="Hall of Fame" class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:scale-110 group-hover:opacity-80 transition-all duration-700">
+                 <div class="absolute inset-0 flex items-center justify-center bg-black/30 group-hover:bg-black/10 transition-colors">
+                     <div class="text-center p-12 relative z-10">
+                        <div class="w-20 h-20 border border-ssg-red mx-auto mb-6 flex items-center justify-center bg-black/60 backdrop-blur-md">
+                            <i data-lucide="fingerprint" class="w-8 h-8 text-ssg-red"></i>
+                        </div>
+                        <p class="text-[10px] text-ssg-red font-black tracking-widest uppercase mb-2">Fandom Landmark</p>
+                        <h4 class="text-white text-2xl font-bold mb-4 italic drop-shadow-lg uppercase">Star-Road</h4>
+                        <p class="text-neutral-300 text-xs font-light">아티스트의 흔적이 영구 보존되는 헤리티지 광장</p>
+                     </div>
+                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. CONCERT SEASON SPECIAL EVENT SECTION -->
+    <section class="bg-white py-24 px-6 border-b border-neutral-100 relative overflow-hidden">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-16">
+                <div class="text-ssg-red text-xs font-black tracking-widest uppercase mb-4">Core Experience 03</div>
+                <h3 class="text-4xl font-bold italic tracking-tight uppercase">Concert Season <span class="text-ssg-red">Special Event</span></h3>
+                <p class="text-neutral-500 mt-4 font-light">공연 기간 동안, 스타필드 청라는 K-pop 아티스트와 전세계 팬을 위한 세계 최초의 전용 페스티벌 그라운드로 변모합니다.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Event 1 -->
+                <div class="p-8 border border-neutral-100 bg-neutral-50 hover:border-ssg-red transition-all group">
+                    <div class="w-12 h-12 mb-6 flex items-center justify-center bg-white group-hover:bg-ssg-red transition-colors">
+                        <i data-lucide="file-text" class="w-6 h-6 text-ssg-red group-hover:text-white"></i>
+                    </div>
+                    <h4 class="font-bold text-lg mb-4 italic uppercase">Special Receipt</h4>
+                    <p class="text-sm text-neutral-500 leading-relaxed">점포 방문 시 영수증에 아티스트 곡 가사 랜덤 출력 및 자필 손편지 인쇄 서비스</p>
+                </div>
+                <!-- Event 2 -->
+                <div class="p-8 border border-neutral-100 bg-neutral-50 hover:border-ssg-red transition-all group">
+                    <div class="w-12 h-12 mb-6 flex items-center justify-center bg-white group-hover:bg-ssg-red transition-colors">
+                        <i data-lucide="coffee" class="w-6 h-6 text-ssg-red group-hover:text-white"></i>
+                    </div>
+                    <h4 class="font-bold text-lg mb-4 italic uppercase">Birthday Cafe</h4>
+                    <p class="text-sm text-neutral-500 leading-relaxed">스타필드 내 입점 카페 브랜드와 협업한 아티스트 공식 생일 카페 운영</p>
+                </div>
+                <!-- Event 3 -->
+                <div class="p-8 border border-neutral-100 bg-neutral-50 hover:border-ssg-red transition-all group">
+                    <div class="w-12 h-12 mb-6 flex items-center justify-center bg-white group-hover:bg-ssg-red transition-colors">
+                        <i data-lucide="monitor" class="w-6 h-6 text-ssg-red group-hover:text-white"></i>
+                    </div>
+                    <h4 class="font-bold text-lg mb-4 italic uppercase">Media Art</h4>
+                    <p class="text-sm text-neutral-500 leading-relaxed">디지털 파사드를 적극 활용한 아티스트 테마 미디어 아트 쇼 상영</p>
+                </div>
+                <!-- Event 4 -->
+                <div class="p-8 border border-neutral-100 bg-neutral-50 hover:border-ssg-red transition-all group">
+                    <div class="w-12 h-12 mb-6 flex items-center justify-center bg-white group-hover:bg-ssg-red transition-colors">
+                        <i data-lucide="music-4" class="w-6 h-6 text-ssg-red group-hover:text-white"></i>
+                    </div>
+                    <h4 class="font-bold text-lg mb-4 italic uppercase">Cheer Lounge</h4>
+                    <p class="text-sm text-neutral-500 leading-relaxed">콘서트 예정 아티스트 노래 상시 재생 및 팬들을 위한 응원법 연습 전용 라운지 제공</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. INTERACTIVE TABS (SHUTTLE & OTHERS) -->
+    <section class="px-6 py-24 max-w-7xl mx-auto">
+        <div class="text-center mb-16">
+            <h3 class="text-2xl font-bold uppercase tracking-widest mb-4"> <span class="text-ssg-red">Global Fan's All-in-one Journey</span></h3>
+            <p class="text-neutral-500 font-light italic">불편함은 해소하고 즐거움은 극대화한 스타필드 청라만의 올인원 팬 서비스</p>
+        </div>
+        
+        <div class="grid grid-cols-2 md:grid-cols-6 gap-4 mb-12">
+            <button onclick="setActiveTab(0)" id="tab-0" class="tab-btn tab-active p-6 text-center border-b-4 border-transparent bg-white shadow-lg transition-all">
+                <i data-lucide="bus" class="w-5 h-5 mx-auto mb-3 text-ssg-red"></i>
+                <span class="text-[11px] font-bold block uppercase tracking-tighter">Starbus</span>
+            </button>
+            <button onclick="setActiveTab(1)" id="tab-1" class="tab-btn p-6 text-center border-b-4 border-transparent bg-white shadow-sm hover:shadow-md transition-all">
+                <i data-lucide="shopping-bag" class="w-5 h-5 mx-auto mb-3 text-neutral-400"></i>
+                <span class="text-[11px] font-bold block uppercase tracking-tighter">Cheongna Edition</span>
+            </button>
+            <button onclick="setActiveTab(2)" id="tab-2" class="tab-btn p-6 text-center border-b-4 border-transparent bg-white shadow-sm hover:shadow-md transition-all">
+                <i data-lucide="heart" class="w-5 h-5 mx-auto mb-3 text-neutral-400"></i>
+                <span class="text-[11px] font-bold block uppercase tracking-tighter">Satisfaction</span>
+            </button>
+            <button onclick="setActiveTab(3)" id="tab-3" class="tab-btn p-6 text-center border-b-4 border-transparent bg-white shadow-sm hover:shadow-md transition-all">
+                <i data-lucide="coffee" class="w-5 h-5 mx-auto mb-3 text-neutral-400"></i>
+                <span class="text-[11px] font-bold block uppercase tracking-tighter">Birthday</span>
+            </button>
+            <button onclick="setActiveTab(4)" id="tab-4" class="tab-btn p-6 text-center border-b-4 border-transparent bg-white shadow-sm hover:shadow-md transition-all">
+                <i data-lucide="award" class="w-5 h-5 mx-auto mb-3 text-neutral-400"></i>
+                <span class="text-[11px] font-bold block uppercase tracking-tighter">Holywood Way</span>
+            </button>
+            <button onclick="setActiveTab(5)" id="tab-5" class="tab-btn p-6 text-center border-b-4 border-transparent bg-white shadow-sm hover:shadow-md transition-all">
+                <i data-lucide="camera" class="w-5 h-5 mx-auto mb-3 text-neutral-400"></i>
+                <span class="text-[11px] font-bold block uppercase tracking-tighter">Booth</span>
+            </button>
+        </div>
+
+        <!-- Detail Content Area -->
+        <div id="content-area" class="bg-white p-8 md:p-16 border border-neutral-100 shadow-2xl min-h-[500px]">
+            <!-- Content will be injected by JS -->
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black text-white py-12 px-6 text-center border-t border-neutral-900">
+        <p class="text-[10px] font-bold tracking-[0.4em] uppercase opacity-50 mb-4">Shinsegae Group • Starfield Cheongna</p>
+        <p class="text-xs font-light text-neutral-600">© 2026 Starfield Cheongna K-POP Fandom Experience Project. All Rights Reserved.</p>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        const fandomData = [
+            {
+                title: "해외팬 전용 교통수단 '스타버스'",
+                subtitle: "B-4) PREMIUM TRANSPORT SERVICE",
+                icon: "bus",
+                description: "서울 ↔ 스타필드 청라 ↔ 인천국제공항을 잇는 전용 교통편을 제공합니다. 기존 인스파이어 아레나 등에서 발생했던 이동 수단 부재의 페인 포인트를 완벽히 해소합니다.",
+                tags: ["양방향 교통", "광고 기반 무료화", "홍보 채널 활용"],
+                features: [
+                    "외부 래핑 및 내부 디자인 변경을 통한 이동식 K-POP 홍보 채널",
+                    "광고 수익 창출을 통해 팬들에게 셔틀 서비스 무료 제공",
+                    "공연 일정에 맞춘 실시간 배차 시스템 운영",
+                    "짐 보관 서비스를 통한 편리한 팬 활동 보장"
+                ],
+                benefit: "공연장-공항-도심을 하나로 잇는 팬덤 맞춤형 동선 제공",
+                bgImage: "NCT_BUS.jpg"
+            },
+            {
+                title: "희소성 극대화 '청라 에디션'",
+                subtitle: "B-2) LIMITED GOODS STRATEGY",
+                icon: "shopping-bag",
+                description: "오직 스타필드 청라에서만 구할 수 있는 스페셜 에디션 굿즈를 출시합니다. '청라 에디션'은 단순한 구매를 넘어 팬들의 소장 욕구와 자랑 욕구를 자극합니다.",
+                tags: ["청라 단독", "굿즈 리셀 방지", "희소 가치"],
+                features: [
+                    "아티스트와 협업한 장소 한정판 기념 오브제 수집 가능",
+                    "청라에서만 발급되는 아티스트 테마 스페셜 영수증 티켓",
+                    "팬덤 결속력을 강화하는 청라 한정 멤버십 굿즈",
+                    "SNS 업로드를 유도하는 시각적 완성도 높은 패키지"
+                ],
+                benefit: "본고장에서만 누릴 수 있는 유일무이한 소장 가치",
+                bgImage: null
+            },
+            {
+                title: "팬덤 자기만족 및 결속력",
+                subtitle: "FANDOM SATISFACTION & LOYALTY",
+                icon: "heart",
+                description: "내가 좋아하는 아이돌의 고향과도 같은 성지를 방문하여 굿즈를 구매하며 느끼는 심리적 만족감을 극대화합니다. 팬들 간의 유대감을 형성하는 장소를 제공합니다.",
+                tags: ["성지 순례", "자기 만족", "팬덤 커뮤니티"],
+                features: [
+                    "K-POP 본고장에 왔다는 자부심과 만족감 충족",
+                    "공연 전후 팬들이 모여 소통할 수 있는 커뮤니티 공간",
+                    "아티스트에 대한 애착을 강화하는 체험형 브랜딩",
+                    "글로벌 팬들을 위한 다국어 지원 및 맞춤형 서비스"
+                ],
+                benefit: "단순 관람을 넘어선 팬덤 라이프스타일의 중심지",
+                bgImage: null
+            },
+            {
+                title: "공식 브랜드 생일 카페",
+                subtitle: "B-4) STARFIELD BRAND BIRTHDAY CAFE",
+                icon: "coffee",
+                description: "기존의 소규모 생일 카페를 스타필드 내 입점 브랜드와 협업하여 기업형 스케일로 확장합니다. 더 넓고 쾌적한 공간에서 아티스트의 생일을 축하하세요.",
+                tags: ["브랜드 콜라보", "대규모 공간", "특전 굿즈"],
+                features: [
+                    "입점 카페와의 협업을 통한 아티스트 테마 메뉴 출시",
+                    "생일 카페 이용객을 위한 스타필드 한정 컵홀더 및 특전",
+                    "생일 기간 동안 매장 내 조명 및 디스플레이 아티스트 테마화",
+                    "팬들이 직접 참여하는 대형 메시지 월 운영"
+                ],
+                benefit: "최상의 인프라에서 즐기는 프리미엄 생일 축제",
+                bgImage: null
+            },
+            {
+                title: "글로벌 랜드마크 '스타 로드'",
+                subtitle: "B-5) GLOBAL LANDMARK HALL OF FAME",
+                icon: "award",
+                description: "할리우드 거리를 모티브로 한 아티스트 명예의 전당입니다. 스타필드 청라를 방문하는 모든 글로벌 팬들에게 잊지 못할 랜드마크 스팟을 선사합니다.",
+                tags: ["핸드프린팅", "성지 순례 코스", "사계절 관광"],
+                features: [
+                    "아티스트의 실제 손도장이 새겨진 성지 순례 필수 코스",
+                    "비시즌 기간에도 팬들을 끌어모으는 상시 운영 시스템",
+                    "야구장 비시즌 공백기를 채우는 지역 상권 활성화 전략",
+                    "아티스트의 등재 과정을 담은 비하인드 영상 독점 공개"
+                ],
+                benefit: "아티스트와 팬이 영구적으로 교감하는 상징적 장소",
+                bgImage: "HollyWood_Honor.jpg"
+            },
+            {
+                title: "사녹(사전녹화) 컨셉 포토부스",
+                subtitle: "B-6) EXCLUSIVE PHOTO STUDIO",
+                icon: "camera",
+                description: "콘서트 착장을 활용한 한정판 포토프레임으로 인생 사진을 남기세요. 영수증 인증 고객에게만 열리는 특별한 경험입니다.",
+                tags: ["착장 활용", "영수증 인증", "SNS 자랑 욕구"],
+                features: [
+                    "실제 공연 의상 테마를 반영한 독점 포토 프레임",
+                    "영수증 하단 랜덤 가사 출력 시스템과 연계된 촬영권",
+                    "컨페티 효과 등 실제 무대 느낌을 재현한 보정 필터",
+                    "SNS 공유 시 아티스트 응원 메시지 자동 해시태그 생성"
+                ],
+                benefit: "공연의 여운을 가장 트렌디하게 기록하는 방식",
+                bgImage: "AllDayProject_Frame.jpg"
+            }
+        ];
+
+        function setActiveTab(index) {
+            document.querySelectorAll('.tab-btn').forEach((btn, i) => {
+                const icon = btn.querySelector('i');
+                const span = btn.querySelector('span');
+                if (i === index) {
+                    btn.classList.add('tab-active');
+                    btn.classList.remove('shadow-sm', 'text-neutral-400');
+                    icon.classList.add('text-ssg-red');
+                    icon.classList.remove('text-neutral-400');
+                    span.classList.add('text-ssg-red');
+                } else {
+                    btn.classList.remove('tab-active');
+                    btn.classList.add('shadow-sm');
+                    icon.classList.remove('text-ssg-red');
+                    icon.classList.add('text-neutral-400');
+                    span.classList.remove('text-ssg-red');
+                    span.classList.add('text-neutral-500');
+                }
+            });
+
+            const content = fandomData[index];
+            const contentArea = document.getElementById('content-area');
+            
+            const visualizationHTML = content.bgImage 
+                ? `<div class="aspect-[4/5] bg-black border border-neutral-100 flex items-center justify-center relative group overflow-hidden">
+                      <img src="${content.bgImage}" class="absolute inset-0 w-full h-full object-cover opacity-50 group-hover:scale-110 transition-transform duration-700">
+                      <div class="text-center z-10 p-12 bg-black/30 backdrop-blur-[2px]">
+                         <i data-lucide="${content.icon}" class="w-16 h-16 text-ssg-red mx-auto mb-8 group-hover:scale-110 transition-all duration-500"></i>
+                         <p class="text-[10px] font-bold text-white uppercase tracking-[0.4em] mb-4">Space Visualization</p>
+                         <h5 class="text-2xl font-bold italic text-white transition-colors uppercase">Concept Mood</h5>
+                         <div class="mt-8 w-12 h-0.5 bg-ssg-red mx-auto group-hover:w-24 transition-all duration-500"></div>
+                      </div>
+                   </div>`
+                : `<div class="aspect-[4/5] bg-neutral-50 border border-neutral-100 flex items-center justify-center relative group overflow-hidden">
+                      <div class="absolute inset-0 bg-ssg-red/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                      <div class="text-center z-10 p-12">
+                         <i data-lucide="${content.icon}" class="w-16 h-16 text-neutral-200 mx-auto mb-8 group-hover:text-ssg-red group-hover:scale-110 transition-all duration-500"></i>
+                         <p class="text-[10px] font-bold text-neutral-400 uppercase tracking-[0.4em] mb-4">Concept Mood</p>
+                         <h5 class="text-2xl font-bold italic text-neutral-300 group-hover:text-black transition-colors uppercase">${content.icon.replace('-', ' ')}</h5>
+                         <div class="mt-8 w-12 h-0.5 bg-neutral-200 mx-auto group-hover:w-24 group-hover:bg-ssg-red transition-all duration-500"></div>
+                      </div>
+                   </div>`;
+
+            contentArea.innerHTML = `
+                <div class="flex flex-col md:flex-row gap-16 fade-in">
+                    <div class="flex-1">
+                        <div class="flex gap-2 mb-8">
+                            ${content.tags.map(tag => `<span class="text-[9px] font-black tracking-widest uppercase px-3 py-1 bg-neutral-100 text-neutral-500 border border-neutral-200">#${tag}</span>`).join('')}
+                        </div>
+                        <p class="text-ssg-red text-xs font-bold tracking-widest mb-2">${content.subtitle}</p>
+                        <h4 class="text-4xl font-bold mb-8 italic tracking-tighter">${content.title}</h4>
+                        <p class="text-lg text-neutral-600 mb-10 leading-relaxed font-light">${content.description}</p>
+                        
+                        <div class="grid grid-cols-1 gap-4 mb-10">
+                            ${content.features.map(f => `
+                                <div class="flex gap-4 items-center group">
+                                    <div class="w-2 h-2 bg-ssg-red rounded-full"></div>
+                                    <span class="text-neutral-700 font-medium text-sm group-hover:translate-x-1 transition-transform">${f}</span>
+                                </div>
+                            `).join('')}
+                        </div>
+
+                        <div class="p-6 bg-ssg-red/5 border-l-4 border-ssg-red flex items-center justify-between group cursor-pointer hover:bg-ssg-red hover:text-white transition-all">
+                            <div>
+                                <p class="text-[10px] font-bold uppercase mb-1 opacity-60">Strategic Advantage</p>
+                                <p class="font-bold text-sm">${content.benefit}</p>
+                            </div>
+                            <i data-lucide="arrow-right" class="w-5 h-5 group-hover:translate-x-2 transition-transform"></i>
+                        </div>
+                    </div>
+                    <div class="flex-1 relative">
+                        ${visualizationHTML}
+                        <div class="absolute top-0 right-0 w-24 h-24 border-t-2 border-r-2 border-neutral-100 group-hover:border-ssg-red transition-colors pointer-events-none"></div>
+                        <div class="mt-6 flex justify-between items-center text-[10px] font-bold tracking-widest text-neutral-400 uppercase">
+                            <span>Starfield Cheongna</span>
+                            <span>Fandom Hub 2026</span>
+                        </div>
+                    </div>
+                </div>
+            `;
+            
+            lucide.createIcons();
+        }
+
+        window.onload = () => {
+            setActiveTab(0);
+            lucide.createIcons();
+        };
+    </script>
+</body>
+</html>
